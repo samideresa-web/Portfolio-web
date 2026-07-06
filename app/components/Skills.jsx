@@ -1,9 +1,13 @@
 const cards = [
   {
     icon: 'fa-solid fa-code',
-    role: 'Both Frontend & Backend Developer',
-    years: '2 Years',
-    desc: 'I build responsive websites using HTML, CSS and JavaScript.',
+    role: 'Full Stack Development',
+    details: [
+      { label: 'Fundamentals', value: 'HTML5, CSS3 and JavaScript' },
+      { label: 'Frontend', value: 'React.js, Next.js, Tailwind CSS, Material UI' },
+      { label: 'Backend', value: 'Node.js, Express.js, REST APIs, Socket.io' },
+      { label: 'Database', value: 'MongoDB, PostgreSQL' },
+    ],
   },
   {
     icon: 'fa-solid fa-laptop',
@@ -25,10 +29,10 @@ const cards = [
   },
 ]
 
-export default function Experience() {
+export default function Skills() {
   return (
-    <section id="experience" className="min-h-screen px-[10%] py-32">
-      <h1 className="text-center text-5xl font-bold mb-12">Experience</h1>
+    <section id="skills" className="min-h-screen px-[10%] py-32">
+      <h1 className="text-center text-5xl font-bold mb-12">Skills</h1>
 
       <div className="flex justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl w-full">
@@ -41,8 +45,24 @@ export default function Experience() {
               <span className="text-xl font-semibold gradient-text block mb-2">
                 {card.role}
               </span>
-              <h3 className="text-2xl font-bold mb-2">{card.years}</h3>
-              <p className="text-sm leading-relaxed opacity-80">{card.desc}</p>
+
+              {card.years && (
+                <h3 className="text-2xl font-bold mb-2">{card.years}</h3>
+              )}
+
+              {card.desc && (
+                <p className="text-sm leading-relaxed opacity-80">{card.desc}</p>
+              )}
+
+              {card.details && (
+                <ul className="text-sm leading-relaxed opacity-80 space-y-1 mt-1">
+                  {card.details.map((d) => (
+                    <li key={d.label}>
+                      <span className="font-semibold">{d.label}:</span> {d.value}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>

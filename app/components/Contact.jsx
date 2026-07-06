@@ -23,8 +23,8 @@ const socials = [
       </svg>
     ),
   },{
-    label: 'Telegram',
-    href: 'https://t.me/your_username',   // 👈 replace with your Telegram
+     label: 'Telegram',
+    href: 'https://t.me/Saamiikooo',
     color: 'text-sky-500',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -43,8 +43,8 @@ const socials = [
     ),
   },
   {
-    label: 'Instagram',
-    href: 'https://instagram.com/your_username',  // 👈 replace with your Instagram
+     label: 'Instagram',
+    href: 'https://www.instagram.com/samidhero?igsh=eDRyNnp1eGs2NTRr',
     color: 'text-pink-500',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
